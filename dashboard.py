@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Chocolate Sales", layout='wide')
 
 # Leitura e preparação dos dados
-df = pd.read_csv("Chocolate Sales_RealTime.csv", delimiter=',', decimal='.')
+df = pd.read_csv("Chocolate_Sales_RealTime.csv", delimiter=',', decimal='.')
 df = pd.DataFrame(df)
 df['Amount'] = df['Amount'].replace(',', '.', regex=True).astype(float)
 df["Date"] = df["Date"].replace('-', ' ', regex=True)
